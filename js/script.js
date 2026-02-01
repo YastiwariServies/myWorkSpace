@@ -297,3 +297,8 @@ document.querySelectorAll(".scroll20pxBottom").forEach(button => {
         parent.scrollBy({ top: 200, behavior: "smooth" });
     });
 });
+
+// reset function : which reloads the page
+document.getElementById("reset").addEventListener("click", () => {
+    location.reload();
+});
