@@ -8,7 +8,7 @@
 body{
     width: 100vw;
     height: 100vh;
-    background-image: url("/images/487834.jpg");
+    background-image: url("https://raw.githubusercontent.com/YastiwariServies/myWorkSpace/refs/heads/main/images/487834.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     -webkit-backdrop-filter: blur(1.5px) brightness(70%);
@@ -411,4 +411,5 @@ body{
 /* Optional: hover effect on checkbox */
 .todoList ul li input[type="checkbox"]:hover {
     transform: scale(1.1);
+
 }
