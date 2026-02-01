@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My WorkStation</title>
+
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Handjet:wght,ELSH@100..900,2&display=swap" rel="stylesheet">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+    <div class="mainBody">
+        <div class="w50-p">
+            <p class="title">> AMIT KUMAR TIWARI</p>
+            <p class="subTitle">mrIdiot | Zeta Zac | The CS Guy!</p>
+            <div class="importantLinks">
+                <a href="#"><i class="fa-brands fa-github"></i> github</a>
+                <a href="#"><i class="fa-brands fa-linkedin"></i> linkedin</a>
+                <a href="#"><i class="fa-solid fa-code"></i> leetcode</a>
+            </div>
+
+            <div class="todoList">
+                <h3>To-Do List</h3>
+                <ul id="todoUL">
+                    <li><input type="checkbox"> <p>Complete the project documentation</p> <div class="deleteBtn"><i class="fa-solid fa-trash"></i></div></li>
+                    <li><input type="checkbox"> <p>Review pull requests</p><div class="deleteBtn"><i class="fa-solid fa-trash"></i></div></li>
+                    <li><input type="checkbox"> <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum earum, repellat expedita, eligendi blanditiis distinctio molestias vel possimus odio nobis ad dicta suscipit asperiores? Quaerat ex praesentium temporibus eveniet. Ullam?</p> <div class="deleteBtn"><i class="fa-solid fa-trash"></i></div></li>
+                </ul>
+
+                <div class="scroll20pxTop">
+                    <i class="fa-solid fa-angle-up"></i>
+                </div>
+
+                <div class="scroll20pxBottom">
+                    <i class="fa-solid fa-angle-down"></i>
+                </div>
+            </div>
+            <div class="addTodo">
+                    <input type="text" id="todoInput" placeholder="Add new task">
+                    <button onclick="addTodoList()"><i class="fa-solid fa-plus"></i></button>
+                </div>
+        </div>
+        <div class="w50-p">
+            <div class="chatBox" id="chatBox">
+                <div class="userChat">
+                    <div class="avatar">
+                        <i class="fa-solid fa-user-astronaut"></i>
+                    </div>
+                    <div class="message">
+                        <p>Hello! Welcome to My WorkStation. How can I assist you today?</p>
+                    </div>
+                </div>
+
+                <div class="aiReply">
+                    <div class="avatar">
+                        <i class="fa-solid fa-robot"></i>
+                    </div>
+                    <div class="message">
+                        <p>Hi there! I'm your AI assistant, ready to help you with any questions or tasks you have. Just let me know what you need!</p>
+                    </div>
+                </div>
+
+                <div class="scroll20pxTop">
+                    <i class="fa-solid fa-angle-up"></i>
+                </div>
+
+                <div class="scroll20pxBottom">
+                    <i class="fa-solid fa-angle-down"></i>
+                </div>
+
+            </div>
+
+            <div class="queryBox">
+                <input type="text" id="queryInput" placeholder="Search here">
+                <button class="submit"><i class="fa-solid fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </div>
+
+    
+    <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-auth-compat.js"></script>
+    
+    <script src="./js/script.js"></script>
+</body>
+</html>

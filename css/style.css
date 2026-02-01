@@ -1,0 +1,414 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Handjet", sans-serif;
+    color: #ffffff;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    background-image: url("/images/487834.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-backdrop-filter: blur(1.5px) brightness(70%);
+    backdrop-filter: blur(1.5px) brightness(70%);
+}
+
+.mainBody{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.w50-p{
+    width: 50%;
+    height: 98vh;
+    background-color: #1c1c1c16;
+    margin: 5px;
+    padding: 10px;
+    border: 2px dotted #ffffff3b;
+    border-radius: 10px;
+
+    overflow: hidden;
+    position: relative;
+}
+
+.w50-p .chatBox{
+    width: 100%;
+    max-height: 90%;
+    background-color: #0000003b;
+    /* border: 1px solid #ffffff3b; */
+    border-radius: 10px;
+    padding: 10px;
+    overflow-y: scroll;
+    position: relative;
+}
+
+.w50-p .chatBox::-webkit-scrollbar{
+    width: 8px;
+}
+
+.w50-p .queryBox{
+    width: 100%;
+    height: 8%;
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.w50-p .queryBox input{
+    width: 100%;
+    height: 90%;
+    border: none;
+    border-radius: 100px;
+    padding: 5px;
+    font-size: 16px;
+    background-color: transparent;
+    outline: none;
+    border: 3px dotted #ffffff49;
+    text-indent: 15px;
+    color: white;
+    font-weight: 500;
+}
+
+.w50-p .queryBox .submit{
+    position: absolute;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    background-color: #ffffff3b;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+}
+
+.w50-p .queryBox .submit:hover{
+    background-color: #ffffff6b;
+}
+
+.w50-p .chatBox .userChat{
+    width: fit-content;
+    max-width: 70%;
+    padding: 10px;
+    background-color: #4646463b;
+    color: rgb(113, 113, 113);
+    font-weight: 500;
+    border-radius: 10px;
+    margin: 10px 0;
+    float: right;
+    clear: both;
+}
+
+.w50-p .chatBox .aiReply{
+    width: fit-content;
+    max-width: 70%;
+    padding: 10px;
+    background-color: #060606b3;
+    color: white;
+    font-weight: 500;
+    border-radius: 10px;
+    margin: 10px 0;
+    float: left;
+    clear: both;
+}
+
+.w50-p .chatBox .scroll20pxTop{
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    color: white;
+    border: 1px dotted white;
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    align-items: center;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.w50-p .chatBox .scroll20pxBottom{
+    position: sticky;
+    top: 95%;
+    bottom: 0;
+    width: 30px;
+    height: 30px;
+    color: white;
+    border: 1px dotted white;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.title {
+  font-size: 55px;
+  margin-left: 10px;
+
+  width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+
+  border-right: 3px solid black; /* cursor */
+
+  animation:
+    typing 7s steps(18, end) infinite,
+    blink 0.7s step-end infinite;
+}
+
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 18ch; /* match text length */
+  }
+  100% {
+    width: 0;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+
+.subTitle{
+    font-size: 16px;
+    margin-left: 12px;
+    color: #f1f1f1e9;
+}
+
+.importantLinks{
+    display: flex;
+    align-items: center;
+    padding: 10px auto;
+    margin-top: 10px;
+
+}
+
+.importantLinks a{
+    text-decoration: none;
+    color: skyblue;
+    margin: 0 10px;
+    font-size: 14px;
+    padding: 5px 10px;
+    border: 1px solid #ffffff3b;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+
+.w50-p .todoList{
+    width: 100%;
+    min-height: 200px;
+    height: 100%;
+    max-height: 75%;
+    background-color: #0000003b;
+    border-radius: 10px;
+    padding: 10px;
+    overflow-y: scroll;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+}
+
+.w50-p .todoList::-webkit-scrollbar{
+    width: 8px;
+}
+
+.w50-p .todoList ul{
+    list-style: none;
+    width: 100%;
+    height: fit-content;
+    margin-top: 10px;
+
+}
+
+.w50-p .todoList ul li{
+    width: 100%;
+    min-height: 40px;
+    background-color: #1c1c1caa;
+    margin: 5px 0;
+    padding: 7px 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.w50-p .todoList ul li p{
+    width: 100%;
+    margin-left: 10px;
+}
+
+.w50-p .todoList ul li input[type="checkbox"]{
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    background-color: #ffffff3b;
+}
+
+.w50-p .todoList ul li .deleteBtn{
+    width: 45px;
+    height: 45px;
+    aspect-ratio: 1/1;
+    background-color: #4e4e4e3b;
+    border: none;
+    border-radius: 50%;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+}
+
+
+
+.w50-p .todoList .scroll20pxTop{
+    position: sticky;
+    top: 0;
+    bottom: 93%;
+    right: 0;
+    left: 90%;
+    width: 35px;
+    height: 35px;
+    aspect-ratio: 1/1;
+    color: white;
+    border: 1px dotted white;
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    align-items: center;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.w50-p .todoList .scroll20pxBottom{
+    position: sticky;
+    top: 93%;
+    bottom: 0;
+    left: 90%;
+    right: 0;
+    width: 35px;
+    height: 35px;
+    aspect-ratio: 1/1;
+    color: white;
+    border: 1px dotted white;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.addTodo{
+    width: 100%;
+    height: 50px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.addTodo input{
+    width: 100%;
+    /* height: 70%; */
+    border: none;
+    border-radius: 100px;
+    padding: 15px 10px;
+    font-size: 16px;
+    background-color: transparent;
+    outline: none;
+    border: 3px dotted #ffffff49;
+    text-indent: 5px;
+    color: white;
+    font-weight: 500;
+}
+
+.addTodo button{
+    position: absolute;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    background-color: #ffffff3b;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+}
+
+/* Remove default checkbox style */
+.todoList ul li input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+/* Incomplete task (default) */
+.todoList ul li input[type="checkbox"]:not(:checked) {
+    background-color: #ffeb3b; /* Yellow */
+    border-color: #fbc02d;
+}
+
+/* Completed task */
+.todoList ul li input[type="checkbox"]:checked {
+    background-color: #4caf50; /* Green */
+    border-color: #388e3c;
+}
+
+/* Checkmark for completed task */
+.todoList ul li input[type="checkbox"]:checked::after {
+    /* content: "✔"; */
+    content: "💗";
+    color: white;
+    font-size: 14px;
+    position: absolute;
+    top: 0;
+    left: 3px;
+}
+
+/* Style the task text */
+.todoList ul li p {
+    display: inline-block;
+    margin: 0;
+    vertical-align: middle;
+    transition: all 0.3s ease;
+}
+
+/* Strike-through completed tasks */
+.todoList ul li input[type="checkbox"]:checked + p {
+    text-decoration: line-through;
+    color: #888;
+}
+
+/* Optional: hover effect on checkbox */
+.todoList ul li input[type="checkbox"]:hover {
+    transform: scale(1.1);
+}
