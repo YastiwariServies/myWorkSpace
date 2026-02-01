@@ -38,13 +38,14 @@ body{
 
 .w50-p .chatBox{
     width: 100%;
-    max-height: 90%;
+    height: 100%;
+    max-height: 91.5%;
     background-color: #0000003b;
-    /* border: 1px solid #ffffff3b; */
     border-radius: 10px;
     padding: 10px;
     overflow-y: scroll;
     position: relative;
+
 }
 
 .w50-p .chatBox::-webkit-scrollbar{
@@ -242,6 +243,7 @@ body{
 .w50-p .todoList ul li{
     width: 100%;
     min-height: 40px;
+    height: fit-content;
     background-color: #1c1c1caa;
     margin: 5px 0;
     padding: 7px 10px;
@@ -363,6 +365,7 @@ body{
     -webkit-appearance: none;
     width: 20px;
     height: 20px;
+    aspect-ratio: 1/1;
     border: 2px solid #ccc;
     border-radius: 5px;
     margin-right: 10px;
@@ -374,12 +377,14 @@ body{
 /* Incomplete task (default) */
 .todoList ul li input[type="checkbox"]:not(:checked) {
     background-color: #ffeb3b; /* Yellow */
+    /* aspect-ratio: 1/1; */
     border-color: #fbc02d;
 }
 
 /* Completed task */
 .todoList ul li input[type="checkbox"]:checked {
     background-color: #4caf50; /* Green */
+    aspect-ratio: 1/1;
     border-color: #388e3c;
 }
 
@@ -389,6 +394,7 @@ body{
     content: "💗";
     color: white;
     font-size: 14px;
+    aspect-ratio: 1/1;
     position: absolute;
     top: 0;
     left: 3px;
@@ -398,6 +404,7 @@ body{
 .todoList ul li p {
     display: inline-block;
     margin: 0;
+    width: 98%;
     vertical-align: middle;
     transition: all 0.3s ease;
 }
@@ -410,6 +417,6 @@ body{
 
 /* Optional: hover effect on checkbox */
 .todoList ul li input[type="checkbox"]:hover {
+    aspect-ratio: 1/1;
     transform: scale(1.1);
-
 }

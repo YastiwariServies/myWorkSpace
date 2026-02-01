@@ -244,3 +244,22 @@ const toggleTodoStatus = (id, checkbox) => {
             checkbox.checked = !checkbox.checked;
         });
 };
+
+
+// Scroll UP by 20px
+document.querySelectorAll(".scroll20pxTop").forEach(button => {
+    button.addEventListener("click", () => {
+        const parent = button.parentElement;
+        // parent.scrollTop -= 60;
+        parent.scrollBy({ top: -200, behavior: "smooth" });
+    });
+});
+
+// Scroll DOWN by 20px
+document.querySelectorAll(".scroll20pxBottom").forEach(button => {
+    button.addEventListener("click", () => {
+        const parent = button.parentElement;
+        // parent.scrollTop += 60;
+        parent.scrollBy({ top: 200, behavior: "smooth" });
+    });
+});
