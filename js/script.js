@@ -117,14 +117,48 @@ function appendMessage(text, sender) {
 }
 
 function formatResponse(text) {
-  // Simple markdown formatting
+  if (!text) return "";
+
   return text
-    .replace(/\*\*(.*?)\*\*/g, "<b>$1</b>")
-    .replace(/\*(.*?)\*/g, "<em>$1</em>")
-    .replace(/^\*/gm, "•") // Bullet points at start of line
-    .replace(/##/g, "")
-    .replace(/\n/g, "<br>");
+    // Escape basic HTML to prevent injection
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+
+    // Code blocks ```code```
+    .replace(/```([\s\S]*?)```/g, (match, code) => {
+      return `<pre class="code-block"><code>${code.trim()}</code></pre>`;
+    })
+
+    // Inline code `code`
+    .replace(/`([^`]+)`/g, `<code class="inline-code">$1</code>`)
+
+    // Headings ###, ##
+    .replace(/^### (.*)$/gm, `<h4>$1</h4>`)
+    .replace(/^## (.*)$/gm, `<h3>$1</h3>`)
+    .replace(/^# (.*)$/gm, `<h2>$1</h2>`)
+
+    // Bold **text**
+    .replace(/\*\*(.*?)\*\*/g, `<strong>$1</strong>`)
+
+    // Italic *text*
+    .replace(/\*(.*?)\*/g, `<em>$1</em>`)
+
+    // Bullet points (*, -, •)
+    .replace(/^\s*[\*\-•]\s+(.*)$/gm, `<li>$1</li>`)
+    .replace(/(<li>.*<\/li>)/gs, `<ul>$1</ul>`)
+
+    // Numbered lists (1. 2. 3.)
+    .replace(/^\s*\d+\.\s+(.*)$/gm, `<li>$1</li>`)
+    .replace(/(<li>.*<\/li>)/gs, `<ol>$1</ol>`)
+
+    // Paragraph breaks
+    .replace(/\n{2,}/g, `</p><p>`)
+    .replace(/\n/g, `<br>`)
+
+    // Wrap plain text in <p>
+    .replace(/^(.+)$/s, `<p>$1</p>`);
 }
+
 
 // ======================
 // FIREBASE CONFIGURATION
